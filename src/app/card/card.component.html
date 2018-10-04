@@ -34,8 +34,15 @@
     <div class="card-side rear flipped color-red">
       <nav class="card-nav">
         <input type="checkbox" name="random">
-        <span>{{fullTime | date:'shortTime'}}</span>
-        <span>{{fullTime | date:'mediumDate'}}</span>
+        <div class="time">
+          <span>{{fullTime | date:'shortTime'}}</span>
+          <span>{{fullTime | date:'mediumDate'}}</span>
+        </div>
+        <div class="buttons">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+        </div>
       </nav>
       <div class="lower-section rear">
         <div class="main-card-content">Rear</div>
