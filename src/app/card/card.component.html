@@ -1,0 +1,51 @@
+<div class="flippy-card">
+  <div [ngClass]="{'card': true, 'flipped': isRear}">
+    <div class="card-side front color-red">
+      <nav class="card-nav">
+        <input type="checkbox" name="random">
+        <div class="time">
+          <span>{{fullTime | date:'shortTime'}}</span>
+          <span>{{fullTime | date:'mediumDate'}}</span>
+        </div>
+        <div class="buttons">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+        </div>
+      </nav>
+      <div class="lower-section front">
+        <div class="main-card-content">
+          <input type="text" name="alarm" class="alarm-name" value="Alarm Name">
+          <input type="text" name="dept" class="bldg-dept" value="Building Department">
+          <div class="square-buttons">
+            <input type="button" value="Bldg">
+            <input type="button" value="Floor">
+            <input type="button" value="Room">
+          </div>
+        </div>
+        <div class="lower-card-nav">
+          <input type="button" value="1">
+          <input type="button" value="2">
+          <input type="button" value="3">   
+          <button (click)="toggleFlipCard()">flip</button>
+        </div>
+      </div>
+    </div>
+    <div class="card-side rear flipped color-red">
+      <nav class="card-nav">
+        <input type="checkbox" name="random">
+        <span>{{fullTime | date:'shortTime'}}</span>
+        <span>{{fullTime | date:'mediumDate'}}</span>
+      </nav>
+      <div class="lower-section rear">
+        <div class="main-card-content">Rear</div>
+        <div class="lower-card-nav">
+          <input type="button" value="5">
+          <input type="button" value="6">
+          <input type="button" value="7">
+          <button (click)="toggleFlipCard()">flip</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
